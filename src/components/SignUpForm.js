@@ -49,7 +49,7 @@ const SignupForm = () => {
       localStorage.setItem('user', JSON.stringify(userData));
       console.log('User Data Submitted and Stored:', userData);
 
-      navigate('/');
+      navigate('/Login');
     }
   };
 

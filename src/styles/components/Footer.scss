@@ -4,15 +4,32 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
+    width: 100%;
+
+        @media only screen and (max-width: 645px) {
+        flex-direction: column;
+        }
 
     .footer__legal, .footer__creator, .footer__contact{
     display: flex;
-    width: 100%;
-    text-align: left;
+    width: 33%;
+
     flex-direction: column;
-        
+    
+            @media only screen and (max-width: 645px) {
+            width: 100%;
+            border-bottom: 1px solid;
+            text-align: left;
+        }
+
         p{
             margin: 5px 20px;
+
+            @media only screen and (max-width: 645px) {
+                width: 55%;
+                margin: auto;
+                padding: 10px;
+                }
         }
     }
 

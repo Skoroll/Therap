@@ -1,0 +1,17 @@
+.tool{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+
+    .tool__article{
+        width: 65%;
+        background-color: antiquewhite;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .tool_two, .tool_four{
+        margin: auto 0 auto auto;
+    }
+}

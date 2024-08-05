@@ -1,11 +1,16 @@
 import React from "react";
 import SignupForm from "../components/SignUpForm";
 import "../styles/pages/SignUp.scss"
+import { useEffect } from "react";
 
 function SignUp(){
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
     return(
         <main>
-            <h2>Créer un compte</h2>
+            <h2 className="signUpTitle">Créer un compte</h2>
             <SignupForm />
 
             <h3>Pourquoi créer un compte ?</h3>

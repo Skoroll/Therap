@@ -1,0 +1,31 @@
+.no_RDV{
+    font-size: 20px;
+    background-color: rgb(212, 180, 180);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 25px;
+
+    .no_RDV__link{
+        text-decoration: underline;
+
+    }
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .contacts__inside{
+        width: 45%;
+        padding: 20px;
+        background-color: rgb(221, 215, 206);
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    .contacts__phone{
+
+    }
+}
