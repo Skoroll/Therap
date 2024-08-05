@@ -1,0 +1,27 @@
+footer{
+    background: rgb(199, 199, 199);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+
+    .footer__legal, .footer__creator, .footer__contact{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    flex-direction: column;
+        
+        p{
+            margin: 5px 20px;
+        }
+    }
+
+    .footer__title{
+        font-size: 20px;
+    }
+
+    .footer__bar{
+        border-left: 1px solid;
+        
+    }
+}

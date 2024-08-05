@@ -1,0 +1,44 @@
+@import './variable.scss';
+
+
+.location {
+    display: flex;
+    flex-direction: row-reverse;
+    h2{
+        margin: 0;
+        text-align: center;
+        margin-bottom: 15px;
+
+        @media only screen and (max-width: 645px) {
+            text-align: left;
+        }
+    }
+
+        @media only screen and (max-width: 645px) {
+            flex-direction: column;        
+        }
+
+    &__txt {
+        
+    }
+
+    &__map {
+
+        display: flex;
+        flex-direction: column;
+        
+        img{
+            max-width: 450px;
+            margin: $margin;
+            width: 90%;
+        }
+    }
+}
+
+.location__side{
+    width: 50%;
+
+    @media only screen and (max-width: 645px) {
+        width: 100%;
+    }
+}

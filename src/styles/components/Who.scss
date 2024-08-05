@@ -1,0 +1,35 @@
+.introduction{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    @media only screen and (max-width: 645px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        }
+
+    h1{
+        margin-top: 0;
+    }
+    .introduction_side{
+        width: 50%;
+
+        @media only screen and (max-width: 645px) {
+            width: 100%;
+        }
+    }
+
+    .introduction__photo{
+        position: relative;
+        display: flex;
+
+        img{
+            width: 50%;
+            min-width: 300px;
+            margin: 0 auto auto auto;
+            @media only screen and (max-width: 645px) {
+                width: 100%;
+            }
+        }
+    }   
+}
