@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/components/Header.scss';
 import logo from '../assets/img/logo.webp';
@@ -12,6 +12,8 @@ const Header = () => {
   const [lastName, setLastName] = useState('');
   const [language, setLanguage] = useState('FR');
   const navigate = useNavigate();
+  const menuRef = useRef(null);
+  const accountRef = useRef(null);
 
   const handleMouseEnterMenu = () => {
     setMenuOpen(true);
@@ -35,7 +37,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest('nav')) {
+      if (menuRef.current && !menuRef.current.contains(event.target) && 
+          accountRef.current && !accountRef.current.contains(event.target)) {
         setMenuOpen(false);
         setAccountOpen(false);
       }
@@ -77,6 +80,7 @@ const Header = () => {
           className={`nav__ul ${menuOpen ? 'open' : ''}`}
           onMouseEnter={handleMouseEnterMenu}
           onMouseLeave={handleMouseLeaveMenu}
+          ref={menuRef}
         >
           <li><Link to="/" onClick={() => setMenuOpen(false)}>Accueil</Link></li>
           <li><Link to="/tool" onClick={() => setMenuOpen(false)}>Mes outils</Link></li>
@@ -86,20 +90,26 @@ const Header = () => {
             className='nav__account'
             onMouseEnter={handleMouseEnterAccount}
             onMouseLeave={handleMouseLeaveAccount}
+            ref={accountRef}
           >
             Compte
             <ul className={`nav__ul__account ${accountOpen ? 'accountDisplay' : ''}`}>
-              <li><Link to="/signup" onClick={() => setAccountOpen(false)}>Créer un compte</Link></li>
-              <li><Link to="/login" onClick={() => setAccountOpen(false)}>S'identifier</Link></li>
-              <li onClick={handleLogout}>Se déconnecter</li>
+              {!firstName && !lastName && (
+                <li><Link to="/signup" id='createAccount' onClick={() => setAccountOpen(false)}>Créer un compte</Link></li>
+              )}
+                            {!firstName && !lastName && (
+                 <li><Link to="/login" onClick={() => setAccountOpen(false)}>S'identifier</Link></li>
+              )}
+             
+              {firstName && lastName && <li onClick={handleLogout}>Se déconnecter</li>}
             </ul>
           </li>
         </ul>
         <i className="fa-solid fa-bars" onClick={handleMouseEnterMenu}></i>
       </nav>
-      {/*<p onClick={toggleLanguage}>
-       <img className="langChoiceFlag" src={language === 'FR' ? frFlag : ukFlag} alt="Drapeau" />
-      </p>*/}
+      <p onClick={toggleLanguage}>
+        <img className="langChoiceFlag" src={language === 'FR' ? frFlag : ukFlag} alt={`Flag of ${language === 'FR' ? 'France' : 'UK'}`} />
+      </p>
     </header>
   );
 };
