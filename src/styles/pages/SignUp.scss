@@ -1,3 +1,9 @@
+@import '../components/mixins.scss';
+
 .signUpTitle{
     text-align: center;
+
+    h2{
+        @include h2Style;
+    }
 }

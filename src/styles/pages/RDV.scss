@@ -1,3 +1,5 @@
+@import '../components/mixins.scss';
+
 form {
     width: 300px;
     margin: 0 auto;
@@ -6,8 +8,10 @@ form {
     border-radius: 5px;
     background-color: #f9f9f9;
   
-
-  
+    h2{
+      @include h2Style;
+    }
+      
       label {
         display: block;
         margin-bottom: 5px;

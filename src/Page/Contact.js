@@ -15,6 +15,7 @@ function Contact(){
     return(
 
         <main>
+            <h2>Contacts</h2>
             <Banner images={bannerImages} />
             <p className="no_RDV">Pour toutes prise de rendez-vous, veuillez passer par <span className="no_RDV__link"> <Link to="/rdv">cette page</Link></span></p>
             <div className="contacts">

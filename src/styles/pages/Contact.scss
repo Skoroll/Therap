@@ -1,8 +1,10 @@
+@import '../components/mixins.scss';
+@import '../components/variable.scss';
 .no_RDV{
     font-size: 20px;
     background-color: rgb(212, 180, 180);
     padding: 15px;
-    border-radius: 20px;
+    border-radius: $border-radius;
     text-align: center;
     font-size: 25px;
 
@@ -19,13 +21,10 @@
 
     .contacts__inside{
         width: 45%;
-        padding: 20px;
-        background-color: rgb(221, 215, 206);
+        padding: $padding;
+        background-color: $background-color;
         margin: 20px auto;
-        border-radius: 20px;
+        border-radius: $border-radius;
     }
 
-    .contacts__phone{
-
-    }
 }

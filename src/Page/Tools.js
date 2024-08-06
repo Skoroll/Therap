@@ -14,8 +14,8 @@ function Tool() {
 
   return (
     <main>
-      <Banner images={bannerImages} />
       <h2>Mes outils</h2>
+      <Banner images={bannerImages} />
       <p>
         Je suis formé à l'utilisation de plusieurs outils pour vous accompagner
         le plus efficacement possible

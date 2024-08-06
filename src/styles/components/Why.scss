@@ -1,3 +1,9 @@
+@import 'mixins';
+
 .why{
     margin: auto auto 50px auto;
+
+    h2{
+        @include h2Style;
+    }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/components/Banner.scss';
 
-const Banner = ({ images }) => {
+const Banner = ({ images = [] }) => {
   return (
     <div className="banner">
       {images.map((image, index) => (
@@ -19,10 +19,6 @@ Banner.propTypes = {
       alt: PropTypes.string
     })
   ).isRequired
-};
-
-Banner.defaultProps = {
-  images: []
 };
 
 export default Banner;

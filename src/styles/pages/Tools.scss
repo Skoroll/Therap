@@ -1,8 +1,13 @@
+@import '../components/mixins.scss';
+
 .tool{
     display: flex;
     flex-direction: column;
     gap: 50px;
 
+    h2{
+        @include h2Style;
+    }
 
     .tool__article{
         width: 65%;

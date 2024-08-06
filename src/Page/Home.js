@@ -15,8 +15,8 @@ useEffect(() => {
     <main>
       <Who />
       <Why />
-      <Location />
       <Office />
+      <Location />
     </main>
   );
 };

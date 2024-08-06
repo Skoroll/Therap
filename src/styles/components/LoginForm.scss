@@ -1,3 +1,8 @@
+@import 'mixins';
+
+  h2{
+    @include h2Style;
+  }
 .login-form {
     width: 300px;
     margin: 0 auto;

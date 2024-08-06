@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';  // Assurez-vous que ce chemin est correct
 import '../styles/components/LoginForm.scss';
 
 const LoginForm = () => {
+  const { login } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -38,11 +40,10 @@ const LoginForm = () => {
     } else {
       const storedUser = JSON.parse(localStorage.getItem('user'));
 
-      // Assurez-vous de vérifier si storedUser existe avant de comparer les valeurs
       if (storedUser && storedUser.email === formData.email && storedUser.password === formData.password) {
         const token = generateToken();
         storedUser.token = token;
-        localStorage.setItem('user', JSON.stringify(storedUser));
+        login(storedUser);
         console.log('Login successful, token generated:', token);
         navigate('/');
       } else {

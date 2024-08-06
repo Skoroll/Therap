@@ -1,6 +1,5 @@
 import React from 'react';
 import "../styles/components/Office.scss"
-import '../styles/components/Office.scss'
 import officePicture from "../assets/img/office.jpg"
 const Office = () => {
   return (
