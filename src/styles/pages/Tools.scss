@@ -1,4 +1,5 @@
 @import '../components/mixins.scss';
+@import '../components/variable.scss';
 
 .tool{
     display: flex;
@@ -10,13 +11,30 @@
     }
 
     .tool__article{
-        width: 65%;
+        display: flex;
+        flex-direction: row;
         background-color: antiquewhite;
         padding: 10px;
         border-radius: 20px;
+        gap: $gap;
+        width: 80%;
+
+        img{
+            width: 300px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $border-radius;
+            margin: auto;
+
+        }
+
+        .tool__title{
+            color: rgb(109, 74, 31);
+        }
     }
 
     .tool_two, .tool_four{
+        flex-direction: row-reverse;
         margin: auto 0 auto auto;
     }
 }

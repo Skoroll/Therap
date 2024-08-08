@@ -60,7 +60,11 @@ const Header = () => {
   return (
     <header>
       <Link to="/"><img className="logo" src={logo} alt="Therapeute" /></Link>
-      <p>{user ? `Bonjour, ${user.firstName} ${user.lastName}` : ''}</p>
+      <p>
+    {user ? (
+      <>Bonjour, <span className='nav_user_name'>{user.firstName} {user.lastName}</span></>
+    ) : ''}
+  </p>
       <nav>
         <ul
           className={`nav__ul ${menuOpen ? 'open' : ''}`}

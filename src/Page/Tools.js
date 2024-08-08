@@ -4,6 +4,7 @@ import books from "../assets/img/banner/books.jpg";
 import  "../styles/pages/Tools.scss"; 
 import { useEffect } from "react";
 import Lorem from "../components/Lorem";
+import ToolImages from "../components/ToolImage";
 
 function Tool() {
 
@@ -22,23 +23,35 @@ function Tool() {
       </p>
       <div className="tool">
         <div className="tool_one tool__article">
-          <h3>Tool 1</h3>
+        <ToolImages version="one"/>
+        <div className="tool__text">
+          <h3 className="tool__title">Tool 1</h3>
           <Lorem />
+        </div>
         </div>
 
         <div className="tool_two tool__article">
-          <h3>Tool 2</h3>
+        <ToolImages version="two"/>
+        <div className="tool__text">
+          <h3 className="tool__title">Tool 2</h3>
           <Lorem />
+          </div>
         </div>
 
         <div className="tool_three tool__article">
-          <h3>Tool 3</h3>
+        <ToolImages version="three"/>
+        <div className="tool__text">
+          <h3 className="tool__title">Tool 3</h3>
           <Lorem />
+          </div>
         </div>
 
         <div className="tool_four tool__article">
-          <h3>Tool 4</h3>
+        <ToolImages version="four"/>
+        <div className="tool__text">
+          <h3 className="tool__title">Tool 4</h3>
           <Lorem />
+          </div>
         </div>
       </div>
     </main>

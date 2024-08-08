@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'variable';
 
 .introduction{
     width: 100%;
@@ -43,6 +44,7 @@
             width: 50%;
             min-width: 300px;
             margin: 0 auto auto auto;
+            border-radius: $border-radius;
             @media only screen and (max-width: 645px) {
                 width: 100%;
             }

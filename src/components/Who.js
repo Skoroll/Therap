@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/components/Who.scss";
-import therapeutePhoto from "../assets/img/image.png";
+import therapeutePhoto from "../assets/img/Therapeute-Les-therapeutes.jpg";
 const Who = () => {
   return (
     <div className="introduction">
